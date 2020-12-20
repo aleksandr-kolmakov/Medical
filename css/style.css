@@ -14,29 +14,23 @@ h3,
 p,
 ul {
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
-@font-face {
-	font-family: 'Noto Sans';
-	src: url('../fonts/NotoSansRegular.woff2') format('woff2');
-	font-display: swap;
+@font-face{
+	font-family:'SFProDisplay-Regular', sans-serif;
+	src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+		 url('../fonts/SFProDisplay-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Noto Sans';
-	src: url('../fonts/NotoSansSemiBold.woff2') format('woff2');
 	font-display: swap;
-	font-weight: 600;
-	font-style: normal;
 }
 
-:root {
-	--color-dark: #4d4d4d;
-	--color-light: #808080;
-	--color-accent: #5d71dd;
+body{
+	font-family: 'SFProDisplay-Regular' sans-serif;
+	font-size: 14px;
+	line-height: 23px;
+	font-weight: 400;
 }
 
 a {
@@ -44,9 +38,65 @@ a {
 	color: inherit;
 }
 
-body {
-	margin: 0;
-	padding: 100px; /* для удобства */
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 400;
+
+.container{
+	max-width: 1300px;
+	padding: 0 15px;
+	margin: 0 auto;
 }
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu__list-item{
+	display: inline-block;
+	font-family:'SFProDisplay-Regular', sans-serif;
+	
+}
+.menu__list-item + .menu__list-item{
+	padding-left: 35px;
+}
+
+.callmi-btn{
+	display: flex;
+	padding: 10px 8px 10px 10px;
+	border: 1px dashed #c0c2c0;
+	border-radius: 7px;
+	cursor: pointer;		
+}
+
+.callmi-btn__inner{
+	font-family:'SFProDisplay-Regular', sans-serif;
+	font-weight: 12px;
+	text-transform: uppercase;	
+} 
+
+.callmi{
+	padding-left: 8px;
+	position: relative;
+	
+}
+
+.callmi::before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 37px;
+	border-left: 1px dashed #c0c2c0;
+	left: 0;
+	top: -10px;
+}
+
+.tell{
+	margin-top: 3px;
+	padding-right: 10px;
+}
+
+
+
+
+	
+
